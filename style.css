@@ -8,3 +8,19 @@ main{grid-template-rows:minmax(0,1fr)}.play-area{height:100%;min-height:0}.board
 /* Watercolor pictures on the dice share the snowmen's palette and texture. */
 .die .dice-art{width:100%;height:100%;display:block;overflow:hidden;filter:drop-shadow(0 2px 1px #254c621a)}
 .die{background:radial-gradient(ellipse at 50% 32%,#fff 35%,#e8f2f7 100%);box-shadow:inset 0 1px 0 #fff,0 5px 0 #b9cdd5,0 9px 14px #3e657d16}
+
+/* Painted winter clearing and picture-sized frames. */
+:root{background:#a6bbe3}
+.winter{background:#a6bbe3 url('assets/winter-clearing.webp') center center/cover no-repeat}
+header{justify-content:flex-end}
+.tool{color:#31516d;background:#f2f8ffb8;border-color:#ffffffc9;box-shadow:0 2px 8px #45668916}
+.tool:hover{background:#fff}
+.board-top{color:#2e4c72}
+.board-top h2{text-shadow:0 1px 5px #ffffffc9}
+.card{border:0;border-radius:15px;background:transparent}
+.card img{border-radius:inherit;object-fit:cover;transform:scale(1.025)}
+.collection-slot{width:min(100%,clamp(40px,7.5svh,68px));height:auto;aspect-ratio:1;align-self:center;justify-self:center}
+.collection-slot img{width:100%;height:100%;max-width:none;object-fit:cover;border-radius:inherit;transform:scale(1.025)}
+.collection-slot.filled{border:0;background:transparent;box-shadow:0 2px 5px #456c8433}
+@media(max-width:620px) and (orientation:portrait){.collection-slot{width:min(100%,31px)}.card{border-radius:11px}}
+@media(max-height:600px) and (orientation:landscape){.collection-slot{width:min(100%,35px)}.card{border-radius:10px}}
