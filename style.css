@@ -24,3 +24,15 @@ header{justify-content:flex-end}
 .collection-slot.filled{border:0;background:transparent;box-shadow:0 2px 5px #456c8433}
 @media(max-width:620px) and (orientation:portrait){.collection-slot{width:min(100%,31px)}.card{border-radius:11px}}
 @media(max-height:600px) and (orientation:landscape){.collection-slot{width:min(100%,35px)}.card{border-radius:10px}}
+
+/* A revealed story uses the same square and position as its snowman. */
+.play-area.story-board{grid-template-rows:minmax(0,1fr);gap:0}
+.card.story-card{cursor:zoom-in;animation:storyReveal .4s ease-out}
+.card.story-card img{transform:none;object-fit:cover}
+.story-dialog{padding:20px;width:min(92vw,760px)}
+.story-dialog form{display:flex;flex-direction:column;align-items:center;gap:14px}
+.story-dialog h2{font-size:20px;margin:0 25px}
+.story-dialog img{display:block;width:min(67svh,100%);height:auto;aspect-ratio:1;max-height:67svh;object-fit:contain;border-radius:14px}
+.story-dialog .close{min-width:40px;min-height:40px}
+#viewStories{display:block;margin:14px auto 0}
+@keyframes storyReveal{from{opacity:.2;filter:brightness(1.2)}to{opacity:1;filter:brightness(1)}}
