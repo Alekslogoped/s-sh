@@ -36,3 +36,27 @@ header{justify-content:flex-end}
 .story-dialog .close{min-width:40px;min-height:40px}
 #viewStories{display:block;margin:14px auto 0}
 @keyframes storyReveal{from{opacity:.2;filter:brightness(1.2)}to{opacity:1;filter:brightness(1)}}
+
+/* Larger frosted window for the dice, with snow trim and an icy blue button. */
+@media(min-width:1001px){main{grid-template-columns:clamp(290px,24vw,340px) minmax(0,1fr)}}
+.panel{border:2px solid #fff;border-radius:30px;padding:29px 24px;background:radial-gradient(ellipse at 0 0,#ffffffee 0,transparent 48%),radial-gradient(ellipse at 100% 100%,#d4eafa88,transparent 58%),linear-gradient(155deg,#f3fbfff2,#e0f0faed 60%,#edf8fff5);box-shadow:inset 0 0 0 5px #ffffff70,inset 0 0 24px #ffffffcf,0 12px 35px #4c75a73b,0 2px 0 #9dc5de;backdrop-filter:blur(12px)}
+.panel:before{content:'';position:absolute;pointer-events:none;left:17px;right:17px;top:-6px;height:14px;border-radius:70% 65% 45% 50%;background:linear-gradient(#fff,#f2fbff);box-shadow:0 3px 5px #95bbd927}
+.panel:after{content:'❄';position:absolute;pointer-events:none;right:17px;top:13px;font-size:24px;color:#8bbcd7;opacity:.65}
+.panel .step-label{color:#5984a7;font-size:11px;letter-spacing:2px;margin-bottom:10px}
+.panel h2{font-size:32px;color:#294e73;text-shadow:0 2px 0 #fff;margin-bottom:17px}
+.panel .dice{gap:12px;margin:0 0 26px}
+.panel .die{border:1px solid #b6d6ec;border-radius:18px;background:radial-gradient(ellipse at 40% 25%,#fff 30%,#ecf8ff 80%);box-shadow:inset 0 1px 0 #fff,0 6px 0 #b5d1e3,0 10px 15px #446e9620}
+.panel .die-wrap>span{font-size:12px;color:#527995;margin-top:12px}
+.panel #roll{min-height:54px;font-size:18px;border-radius:17px;border:1px solid #468ab7;background:linear-gradient(#6aafd5,#438bbd);box-shadow:inset 0 1px 0 #d4f2ffb3,0 5px 0 #316a99,0 7px 15px #4776a52b;text-shadow:0 1px 1px #32628c}
+.panel #roll:hover:not(:disabled){background:linear-gradient(#78bce1,#4c97c9)}
+.panel #roll:disabled{opacity:.68;box-shadow:inset 0 1px 0 #fff8,0 4px 0 #608fae}
+.panel #feedback{height:76px;font-size:15px;color:#4e7393;margin-top:18px}
+.panel .progress-area{border-color:#b8d8ea;padding-top:17px}
+.panel .progress-label{font-size:14px;color:#527b9c}
+.panel .progress-label strong{color:#2d5779}
+.panel .progress{height:9px;background:#cfe5f2;box-shadow:inset 0 1px 2px #91b6ce33}
+.panel #fill{background:linear-gradient(90deg,#78bbd1,#559fc7)}
+@media(min-width:621px) and (max-width:1000px){main{grid-template-columns:250px minmax(0,1fr);gap:18px}.panel{padding:24px 18px}.panel h2{font-size:28px}.panel .dice{gap:9px}.panel .die-wrap>span{font-size:10px}.panel #roll{font-size:15px;min-height:48px}.panel #feedback{font-size:13px;height:62px}}
+@media(max-width:620px) and (orientation:portrait){.panel{padding:13px 14px;border-radius:21px;gap:6px 14px}.panel:before{left:14px;right:14px;height:10px;top:-4px}.panel:after{display:none}.panel .dice{margin:0;gap:9px}.panel .die{max-height:68px;max-width:68px;border-radius:13px}.panel .die-wrap>span{font-size:9px;margin-top:8px}.panel #roll{font-size:13px;min-height:42px;padding:9px 5px;border-radius:12px}.panel #feedback{height:32px;min-height:32px;font-size:11px;margin:0}.panel h2,.panel .step-label{display:none}}
+@media(max-height:600px) and (orientation:landscape){main{grid-template-columns:240px minmax(0,1fr);gap:18px}.panel{padding:18px 16px;border-radius:24px}.panel:after{font-size:18px;top:10px;right:12px}.panel .step-label{font-size:9px;margin-bottom:6px}.panel h2{font-size:25px;margin-bottom:12px}.panel .dice{gap:10px;margin:0 0 18px}.panel .die{border-radius:13px}.panel .die-wrap>span{font-size:10px;margin-top:9px}.panel #roll{min-height:43px;font-size:15px;padding:9px}.panel #feedback{height:41px;font-size:12px;margin-top:12px}.panel .progress-area{padding-top:10px}.panel .progress-label{font-size:11px}.panel .progress{height:7px}}
+@media(max-height:430px) and (orientation:landscape){.panel{padding:10px 14px}.panel .step-label{display:none}.panel h2{font-size:22px;margin-bottom:9px}.panel .dice{margin-bottom:13px;gap:9px}.panel .die{max-height:57px;max-width:57px;margin:auto}.panel .die-wrap>span{font-size:9px;margin-top:7px}.panel #roll{min-height:36px;font-size:14px;padding:7px}.panel #feedback{height:28px;font-size:11px;margin-top:8px}.panel .progress-area{padding-top:7px}.panel .progress{margin-top:6px;height:6px}}
